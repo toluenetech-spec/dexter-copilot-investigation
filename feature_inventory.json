@@ -1,0 +1,30 @@
+{
+  "meta": {"project": "DEXTER-REVERSE-ENGINEERING", "date": "2026-11-26", "source": "dextercopilot.ai official site, FAQ, pricing (marketing claims treated as feature contract)"},
+  "features": [
+    {"id": "F01", "feature": "Voice control (Dexter Voice)", "plans": "Standard+", "category": "input"},
+    {"id": "F02", "feature": "Typed command bar", "plans": "all", "category": "input"},
+    {"id": "F03", "feature": "OBS scene switching", "plans": "all", "category": "obs"},
+    {"id": "F04", "feature": "OBS source control and positioning", "plans": "all", "category": "obs"},
+    {"id": "F05", "feature": "OBS mic/desktop audio mute", "plans": "all", "category": "obs"},
+    {"id": "F06", "feature": "Start/stop stream and recording", "plans": "all", "category": "obs"},
+    {"id": "F07", "feature": "Studio mode, clips", "plans": "all", "category": "obs"},
+    {"id": "F08", "feature": "Custom chat-rule moderation (timeout/ban)", "plans": "all", "category": "twitch"},
+    {"id": "F09", "feature": "Polls", "plans": "all", "category": "twitch"},
+    {"id": "F10", "feature": "Keyword giveaways", "plans": "all", "category": "twitch"},
+    {"id": "F11", "feature": "Thanks new subs", "plans": "all", "category": "twitch"},
+    {"id": "F12", "feature": "Channel management (title, schedule, pins, chat mode)", "plans": "all", "category": "twitch"},
+    {"id": "F13", "feature": "Leo scene/overlay/widget design", "plans": "Pro (5/mo)", "category": "design"},
+    {"id": "F14", "feature": "Stream recaps and analytics", "plans": "Standard 6/mo, Pro 18/mo", "category": "analytics"},
+    {"id": "F15", "feature": "Discord posting", "plans": "all", "category": "twitch"},
+    {"id": "F16", "feature": "Telegram posting", "plans": "all", "category": "integrations"},
+    {"id": "F17", "feature": "Open/close apps", "plans": "all", "category": "desktop"},
+    {"id": "F18", "feature": "Browser links/research", "plans": "all", "category": "desktop"},
+    {"id": "F19", "feature": "Music control", "plans": "all", "category": "desktop"},
+    {"id": "F20", "feature": "Notes and reminders", "plans": "all", "category": "assistant"},
+    {"id": "F21", "feature": "Email drafting", "plans": "all", "category": "assistant"},
+    {"id": "F22", "feature": "Read-aloud (TTS)", "plans": "paid", "category": "voice"},
+    {"id": "F23", "feature": "Multi-app single request", "plans": "all", "category": "orchestration"},
+    {"id": "F24", "feature": "Confirmation for destructive actions", "plans": "all", "category": "safety"},
+    {"id": "F25", "feature": "Chat assist (talking to chat)", "plans": "paid", "category": "twitch"}
+  ]
+}

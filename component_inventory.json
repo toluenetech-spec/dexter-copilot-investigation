@@ -1,0 +1,15 @@
+{
+  "meta": {"project": "DEXTER-REVERSE-ENGINEERING", "date": "2026-11-26", "note": "Reconstructed components. Binary was never analyzed; location/confidence given per component."},
+  "components": [
+    {"id": "app-shell", "name": "Desktop app shell", "role": "UI: command bar, connected-tools panel, status", "location": "local", "evidence": "official site screenshot description", "confidence": "CONFIRMED (existence) / UNKNOWN (tech)"},
+    {"id": "voice-pipeline", "name": "Voice capture + STT/TTS", "role": "voice commands + read-aloud", "location": "local capture, cloud STT/TTS (metered)", "confidence": "STRONGLY INFERRED"},
+    {"id": "agent-core", "name": "Agent orchestration (LLM tool-calling)", "role": "intent parse, planning, tool dispatch", "location": "cloud", "confidence": "STRONGLY INFERRED"},
+    {"id": "obs-adapter", "name": "OBS control adapter", "role": "scenes, sources, audio, record, stream, studio mode", "location": "local, obs-websocket 4455", "confidence": "STRONGLY INFERRED"},
+    {"id": "twitch-adapter", "name": "Twitch chat/mod adapter", "role": "read/post chat, rules, timeout/ban, polls, giveaways", "location": "split (IRC read local, actions via Helix)", "confidence": "STRONGLY INFERRED"},
+    {"id": "comms-adapters", "name": "Discord/Telegram adapters", "role": "post announcements", "location": "cloud APIs", "confidence": "CONFIRMED (feature) / UNKNOWN (mechanism)"},
+    {"id": "leo-designer", "name": "Scene/overlay design agent (Leo)", "role": "generate themed scenes/widgets, install into OBS", "location": "cloud generation + local install", "confidence": "STRONGLY INFERRED"},
+    {"id": "analytics", "name": "Stream recap/analytics engine", "role": "chat-pace, raid impact, peak analysis, recommendations", "location": "cloud", "confidence": "STRONGLY INFERRED"},
+    {"id": "metering-auth", "name": "Auth/billing/quota service", "role": "plan quotas (voice/chat/recap counts)", "location": "cloud (Supabase confirmed for site)", "confidence": "STRONGLY INFERRED"},
+    {"id": "desktop-automation", "name": "App/process control, browser control, music", "role": "open/close apps, links, music, email drafts, notes", "location": "local", "confidence": "CONFIRMED (feature) / UNKNOWN (API)"}
+  ]
+}

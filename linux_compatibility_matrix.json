@@ -1,0 +1,23 @@
+{
+  "meta": {"project": "DEXTER-REVERSE-ENGINEERING", "date": "2026-11-26", "note": "Linux-native replacement for every capability; all replacements verified to exist as of retrieval date."},
+  "matrix": [
+    {"capability": "OBS control", "runs_on_linux": "yes", "replacement": "obs-websocket (bundled OBS >=28) + obs-websocket-js/obsws-python", "requirements": "OBS Studio, websocket enabled, port 4455", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Voice STT", "runs_on_linux": "yes", "replacement": "whisper.cpp", "requirements": "CPU (Vulkan/CUDA optional), ~1GB model", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Voice TTS", "runs_on_linux": "yes", "replacement": "Piper", "requirements": "CPU only", "wayland_ok": true, "x11_ok": true},
+    {"capability": "VAD / wake word", "runs_on_linux": "yes", "replacement": "Silero VAD / openWakeWord", "requirements": "none", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Audio capture/routing", "runs_on_linux": "yes", "replacement": "PipeWire + virtual sinks", "requirements": "pipewire, pw-cli tools", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Screen capture", "runs_on_linux": "yes", "replacement": "xdg-desktop-portal ScreenCast + PipeWire", "requirements": "portal frontend, user consent dialog", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Screen text understanding", "runs_on_linux": "yes", "replacement": "AT-SPI2 accessibility tree (pyatspi2); OCR fallback Tesseract", "requirements": "at-spi2-core, GTK/Qt accessibility enabled", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Keyboard/mouse automation", "runs_on_linux": "yes", "replacement": "ydotool (uinput) on Wayland+X11; xdotool X11-only", "requirements": "uinput permissions (/dev/uinput, udev rule + input group)", "wayland_ok": "partial (ydotool)", "x11_ok": true},
+    {"capability": "Window management", "runs_on_linux": "yes", "replacement": "wlr-foreign-toplevel / EWMH wmctrl (X11) / compositor IPC", "requirements": "compositor-dependent on Wayland", "wayland_ok": "partial", "x11_ok": true},
+    {"capability": "App launch/process control", "runs_on_linux": "yes", "replacement": ".desktop + gtk-launch; systemd-run; pkill restricted", "requirements": "none", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Browser automation", "runs_on_linux": "yes", "replacement": "Playwright", "requirements": "Chromium/WebKit deps", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Music control", "runs_on_linux": "yes", "replacement": "MPRIS2 over D-Bus", "requirements": "player with MPRIS (VLC, Spotify, etc.)", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Twitch chat/mod", "runs_on_linux": "yes", "replacement": "tmi.js + Helix + EventSub", "requirements": "Twitch OAuth app token", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Discord/Telegram posting", "runs_on_linux": "yes", "replacement": "discord.js / python-telegram-bot", "requirements": "bot tokens", "wayland_ok": true, "x11_ok": true},
+    {"capability": "LLM orchestration", "runs_on_linux": "yes", "replacement": "Vercel AI SDK / LangGraph / pi-mono; cloud (AshnaAI API) or local (Ollama)", "requirements": "Node >=20 or Python 3.10+", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Memory/context store", "runs_on_linux": "yes", "replacement": "SQLite + sqlite-vec", "requirements": "none", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Desktop notifications", "runs_on_linux": "yes", "replacement": "libnotify / org.freedesktop.Notifications", "requirements": "notification daemon", "wayland_ok": true, "x11_ok": true},
+    {"capability": "Secrets storage", "runs_on_linux": "yes", "replacement": "libsecret / gnome-keyring", "requirements": "keyring daemon", "wayland_ok": true, "x11_ok": true}
+  ]
+}

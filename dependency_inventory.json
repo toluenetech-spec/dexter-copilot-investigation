@@ -1,0 +1,19 @@
+{
+  "meta": {"project": "DEXTER-REVERSE-ENGINEERING", "date": "2026-11-26", "note": "Dependencies Dexter is inferred to use (left) and recommended Linux equivalents (right). Binary unverified."},
+  "entries": [
+    {"capability": "OBS control", "dexter_dependency": "obs-websocket 5.x (inferred)", "linux_equivalent": "same plugin, clients obs-websocket-js / obsws-python / obws"},
+    {"capability": "STT", "dexter_dependency": "cloud STT (inferred)", "linux_equivalent": "whisper.cpp / faster-whisper"},
+    {"capability": "TTS", "dexter_dependency": "cloud TTS (inferred)", "linux_equivalent": "Piper / Kokoro"},
+    {"capability": "VAD/wake", "dexter_dependency": "unknown", "linux_equivalent": "Silero VAD, openWakeWord"},
+    {"capability": "LLM orchestration", "dexter_dependency": "unknown provider(s)", "linux_equivalent": "Vercel AI SDK / LangGraph / pi-mono; AshnaAI API or local Ollama"},
+    {"capability": "Twitch chat", "dexter_dependency": "IRC/EventSub (inferred)", "linux_equivalent": "tmi.js + Helix/EventSub"},
+    {"capability": "Discord", "dexter_dependency": "bot/webhook (unknown which)", "linux_equivalent": "discord.js"},
+    {"capability": "Telegram", "dexter_dependency": "Bot API (unknown specifics)", "linux_equivalent": "python-telegram-bot / grammY"},
+    {"capability": "Browser automation", "dexter_dependency": "unknown", "linux_equivalent": "Playwright"},
+    {"capability": "Input automation", "dexter_dependency": "Win32 SendInput/UIA (assumed)", "linux_equivalent": "ydotool / xdotool / AT-SPI2"},
+    {"capability": "Screen capture", "dexter_dependency": "DXGI/GDI (assumed)", "linux_equivalent": "PipeWire + xdg-desktop-portal"},
+    {"capability": "Music control", "dexter_dependency": "unknown", "linux_equivalent": "MPRIS2 over D-Bus"},
+    {"capability": "Auth/site backend", "dexter_dependency": "Supabase (CONFIRMED on website)", "linux_equivalent": "Supabase self-host or equivalent"},
+    {"capability": "Binary analysis tooling (project)", "dexter_dependency": "REA rea-agents v6.10.1 (documented, not executed)", "linux_equivalent": "npx rea-agents setup on a capable host"}
+  ]
+}

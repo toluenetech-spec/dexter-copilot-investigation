@@ -1,0 +1,13 @@
+{
+  "meta": {"project": "DEXTER-REVERSE-ENGINEERING", "date": "2026-11-26", "note": "APIs Dexter is inferred to touch; no endpoints were extracted from the binary (never accessed)."},
+  "apis": [
+    {"id": "A01", "integration": "OBS", "protocol": "obs-websocket 5.x JSON-RPC over WebSocket", "endpoint": "ws://localhost:4455", "auth": "challenge SHA256 password", "confidence": "STRONGLY INFERRED", "docs": "github.com/obsproject/obs-websocket/blob/master/docs/PROTOCOL.md"},
+    {"id": "A02", "integration": "Twitch chat read", "protocol": "IRC over TLS WebSocket", "endpoint": "wss://irc.chat.twitch.tv:443", "auth": "OAuth token or anonymous read", "confidence": "STRONGLY INFERRED", "docs": "dev.twitch.tv"},
+    {"id": "A03", "integration": "Twitch moderation/actions", "protocol": "Helix REST (ban, timeout, poll) + EventSub", "endpoint": "api.twitch.tv/helix/*", "auth": "OAuth app/user token", "confidence": "STRONGLY INFERRED", "docs": "dev.twitch.tv/docs/api/reference"},
+    {"id": "A04", "integration": "Twitch analytics", "protocol": "Helix analytics endpoints or internal chat-log analysis", "confidence": "POSSIBLE", "docs": "dev.twitch.tv"},
+    {"id": "A05", "integration": "Discord", "protocol": "Bot REST/websocket or webhook", "confidence": "UNKNOWN which", "docs": "discord.com/developers"},
+    {"id": "A06", "integration": "Telegram", "protocol": "Bot API sendMessage", "confidence": "POSSIBLE", "docs": "core.telegram.org/bots/api"},
+    {"id": "A07", "integration": "Dexter cloud AI", "protocol": "UNKNOWN (proprietary backend; endpoints unknown)", "confidence": "UNKNOWN", "docs": null},
+    {"id": "A08", "integration": "Download delivery", "protocol": "Supabase Edge Function send-download-link", "endpoint": "zyqrnwsidltyjnmykrhk.supabase.co/functions/v1/send-download-link", "auth": "email form", "confidence": "CONFIRMED (website)", "docs": "supabase.com/docs"}
+  ]
+}
